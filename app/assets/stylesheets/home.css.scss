@@ -3,18 +3,12 @@
 	FOOTER
 ****************************************/
 
-ul {
-	list-style: none;
-	li {
-		display: inline-block;
-	}
-}
-
 .footer {
+
 	position: fixed;
 	bottom: 18px;
 	font-size: 1.2em;
-
+	color: #FFFFFF;
 
 	.icons {
 		position: fixed;
@@ -24,14 +18,25 @@ ul {
 
 	a, a:visited, a:hover {
 		text-decoration: none;
-		color: purple;
+		color: #FFFFFF;
+	}
+
+	list-style: none;
+	li {
+		display: inline-block;
 	}
 	
 }
 
-.icon {
+.tw {
 	width: 40px;
 	height: 40px;
+	margin-left: 30px;
+}
+
+.fb {
+	width: 43px;
+	height: 43px;
 	margin-left: 30px;
 }
 
@@ -46,16 +51,86 @@ ul {
 	FIRST PAGE
 ****************************************/
 
+#first {
+	background-size: contain;
+	background: url(../assets/first.jpg) no-repeat;
+	z-index: -10;
+	color: #FFFFFF;
+	text-align: center;
 
-
-div {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+	h1 {
+		margin-top: 220px;
+		font-size: 3em;
+		margin-bottom: 40px;
+	}
 }
 
+
+/***************************************
+	SECOND PAGE
+****************************************/
+
+
+#second {
+	text-align: center;
+	width: 100%;
+	background-size: contain;
+	background: url(../assets/second.jpg) no-repeat;
+	z-index: -10;
+	color: #FFFFFF;
+
+	h1 {
+		font-size: 3em;
+		margin-top: 140px;
+	}
+
+	ul {
+		list-style: none;
+		margin-top: 40px; 
+		width: 80%;
+		margin: auto;
+		font-size: 1.4em;
+
+		li {
+			display: inline-block;
+			width: 25%;
+			float: left;
+			margin: 0 4.16% 0 4.16%;
+		}
+	}
+}
+
+
+
+
+
+
+/***************************************
+	BUTTONS
+****************************************/
+
+
+
+.button {
+    background-color: green;
+    width: 50px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 30px;  
+}
+
+#next {
+    right: 500px;
+    bottom: 200px;   
+}
+
+#prev {
+    left: 500px;  
+    bottom: 200px;  
+}
 
 
 

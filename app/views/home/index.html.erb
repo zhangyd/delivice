@@ -7,31 +7,52 @@
 
 	<body>
 
+		<div class="button" id="next">Next</div>
+		<div class="button" id="prev">Prev</div>
 
-		<!-- BEGIN: first page dive -->
-		<div >
-			<h1>Care For Your Body. Care For Your Mind</h1>
-			<h1>Care For Your Time</h1>
-			<p>Start Shopping</p>
-			<p>free delivery for orders over 40 dollers</p>
+		<div id="fader">
+
+			<!-- BEGIN: first page dive -->
+			<div id="first">
+				<h1>Care For Your Body. Care For Your Mind<br>Care For Your Time</h1>
+				<h2>Start Shopping</h2>
+				<p>free delivery for orders over 40 dollers</p>
+
+
+			</div>
+			<!-- END: first page dive -->
+
+
+
+
+			<!-- BEGIN: second page dive -->
+			<div id="second">
+				<h1>Our Core Values</h1>
+
+				<ul>
+					<li>
+						<h2>Quality</h2>
+						<p>We guarantee that groceries delivered to you from us are to your highest standards. If it's not fresh, we will not deliver.</p>
+					</li>
+					<li>
+						<h2>Trust</h2>
+						<p>We pledge to get your orders delivered on time, every time.</p>
+					</li>
+					<li>
+						<h2>Care</h2>
+						<p>Every order we get, we donate 3% of the profit to local or national charities.</p>
+					</li>
+
+				</ul>
+				
+
+
+			</div>
+			<!-- END: second page dive -->
 
 
 		</div>
-		<!-- END: first page dive -->
 
-
-
-
-		<!-- BEGIN: first page dive -->
-		<div >
-			<h1>hahahahah</h1>
-			<h1>Care For Your Time</h1>
-			<p>Start Shopping</p>
-			<p>free delivery for orders over 40 dollers</p>
-
-
-		</div>
-		<!-- END: first page dive -->
 
 		
 		
@@ -44,8 +65,8 @@
 				<li><%= link_to "Terms", terms_path %></li>
 			</span>
 			<span class="icons">
-				<li><%= link_to image_tag('facebook.png', :class => "icon"), "http://www.facebook.com", :target=> "_blank" %></li>
-				<li><%= link_to image_tag('twitter.png', :class => "icon"), "http://www.twitter.com", :target=> "_blank" %></li>
+				<li><%= link_to image_tag('facebook.png', :class => "fb"), "http://www.facebook.com", :target=> "_blank" %></li>
+				<li><%= link_to image_tag('twitter.png', :class => "tw"), "http://www.twitter.com", :target=> "_blank" %></li>
 			</span>
 		</ul>
 		<!-- END: footer that always stay at the bottom -->
