@@ -14,8 +14,15 @@
 		<ul class="header">	
 			<h2>Delivice</h2>
 			<span id="check">
-				<li><%= link_to "Sign Up", new_user_registration_path %></li>
-				<li><%= link_to "Sign In", new_user_session_path %></li>
+				
+				<% if user_signed_in? %>
+					<li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+
+				<% else %>
+					<li><%= link_to "Sign Up", new_user_registration_path %></li>
+					<li><%= link_to "Sign In", new_user_session_path %></li>
+				<% end %>
+
 			</span>
 		</ul>
 
@@ -92,6 +99,31 @@
 
 			</div>
 			<!-- END: third page dive -->
+
+
+
+			<!-- BEGIN: forth page dive -->
+			<div id="forth">
+				<h1>What Our Customre Are Saying</h1>
+
+				<ul>
+					<li>
+						<h2>Quality</h2>
+						<p>We guarantee that groceries delivered to you from us are to your highest standards. If it's not fresh, we will not deliver.</p>
+					</li>
+					<li>
+						<h2>Trust</h2>
+						<p>We pledge to get your orders delivered on time, every time.</p>
+					</li>
+					<li>
+						<h2>Care</h2>
+						<p>Every order we get, we donate 3% of the profit to local or national charities.</p>
+					</li>
+
+				</ul>
+
+			</div>
+			<!-- END: forth page dive -->
 
 
 

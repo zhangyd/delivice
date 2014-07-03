@@ -1,6 +1,6 @@
 class Store < ActiveRecord::Base
-	has_many :catagories
-	has_many :subcatagories, :through => :catagories
-	has_many :items, :through => :subcatagories
+	has_many :categories
+	has_many :subcategories, :through => :categories
+	has_many :items, :through => :subcategories
 
 end

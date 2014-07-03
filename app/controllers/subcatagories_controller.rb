@@ -1,4 +1,0 @@
-class SubcatagoriesController < ApplicationController
-
-
-end

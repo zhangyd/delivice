@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140702203229) do
     t.integer "item_id", null: false
   end
 
-  create_table "catagories", force: true do |t|
+  create_table "categories", force: true do |t|
     t.string   "name"
     t.integer  "store_id"
     t.datetime "created_at"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140702203229) do
     t.string   "name"
     t.integer  "price"
     t.string   "unit"
-    t.integer  "subcatagory_id"
+    t.integer  "subcategory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(version: 20140702203229) do
     t.datetime "updated_at"
   end
 
-  create_table "subcatagories", force: true do |t|
+  create_table "subcategories", force: true do |t|
     t.string   "name"
-    t.integer  "catagory_id"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

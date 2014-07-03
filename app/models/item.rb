@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
 	has_many :carts
 	has_many :favorites
-	belongs_to :subcatagories
+	has_many :users :through, => :favorites
+	belongs_to :subcategory
 
 end
