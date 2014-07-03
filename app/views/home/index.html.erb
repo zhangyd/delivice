@@ -10,6 +10,18 @@
 		<div class="button" id="next">Next</div>
 		<div class="button" id="prev">Prev</div>
 
+
+		<ul class="header">	
+			<h2>Delivice</h2>
+			<span id="check">
+				<li><%= link_to "Sign Up", new_user_registration_path %></li>
+				<li><%= link_to "Sign In", new_user_session_path %></li>
+			</span>
+		</ul>
+
+
+
+
 		<div id="fader">
 
 			<!-- BEGIN: first page dive -->
@@ -44,11 +56,43 @@
 					</li>
 
 				</ul>
-				
+			</div>
+			<!-- END: second page dive -->
+
+
+			<!-- BEGIN: third page dive -->
+			<div id="third">
+				<h1>How It Works</h1>
+				<ul id="toprow">
+					<li>
+						<img src="assets/store.png">
+						<h3>Choose Your Store</h3>
+					</li>
+					<li>
+						<img src="assets/cart.png">
+						<h3>Choose Your Items</h3>
+					</li>
+					<li>
+						<img src="assets/time.png">
+						<h3>Choose Delivery Time</h3>
+					</li>
+				</ul>
+
+				<ul id="bottonrow">
+					<li>
+						<img src="assets/pay.png">
+						<h3>Pay Online</h3>
+					</li>
+					<li>
+						<img src="assets/deliver.png">
+						<h3>Answer Your Door</h3>
+					</li>
+				</ul>
 
 
 			</div>
-			<!-- END: second page dive -->
+			<!-- END: third page dive -->
+
 
 
 		</div>

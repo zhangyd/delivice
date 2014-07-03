@@ -1,18 +1,4 @@
 
-$(function(){
-	$('#fader div:not(:first)').hide();
-	$('#fader div').css('position','absolute');
-	$('#fader div').css('top','0px');
-	$('#fader div').css('left','50%');
-	$('#fader div').each(function(){
-		// var div = $(this);
-		// $('<div>').att
-	});
-});
-
-var pause 
-
-
 $(function() {
     $('#fader div:not(:first)').hide();
     $('#fader div').css('position', 'absolute');
