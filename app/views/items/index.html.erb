@@ -1,0 +1,13 @@
+<h1>Items index</h1>
+
+<ul>
+	<% @items.each do |item| %>
+		<li>
+			<%= item.name %>
+			<%= item.price %>
+			<%= item.subcategory_id %>
+			<%= item.unit %>
+		</li>
+	<% end %>
+</ul>
+

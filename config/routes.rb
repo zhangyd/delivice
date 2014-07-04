@@ -7,12 +7,20 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'home#index'
 
+
+  resources :subcategories, :only => [:show]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'privacy' => 'home#privacy'
   get 'terms' => 'home#terms'
 
   get 'kroger' => 'stores#kroger'
+
+  get 'items' => 'items#index'
+
+  get 'items/new' => 'items#new'
+  post 'items' => 'items#create'
 
 
 
