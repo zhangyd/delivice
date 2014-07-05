@@ -1,18 +1,40 @@
 <!DOCTYPE html> 
 
+
+
 <html>
 	<head>
 		<title>Delivice</title>
 	</head>
 	<body>
-		
-		<header>
-	<ul>
-		<li><%= link_to 'Kroger', stores_kroger_path %></li>
-		<li><%= link_to 'Whole Foods', stores_wholefoods_path %></li>
-		<li><%= link_to 'Costco', stores_costco_path %></li>
-	</ul>
-</header>
+
+		<ul class="chooseheader">	
+			<h2>Delivice</h2>
+			<span id="check">
+				
+				<% if user_signed_in? %>
+					<li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+
+				<% else %>
+					<li><%= link_to "Sign Up", new_user_registration_path %></li>
+					<li><%= link_to "Sign In", new_user_session_path %></li>
+				<% end %>
+
+			</span>
+		</ul>
+
+		<div id ="choosestore">
+			<h1>Choose Your Store</h1>
+
+			<div id="tryingtocenter">
+				<ul>
+					<li><%= link_to 'Kroger', stores_kroger_path %></li>
+					<li><%= link_to 'Whole Foods', stores_wholefoods_path %></li>
+					<li><%= link_to 'Costco', stores_costco_path %></li>
+				</ul>
+			</div>
+		</div>
+
 
 	</body>
 

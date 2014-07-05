@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get 'items/new' => 'items#new'
   post 'items' => 'items#create'
 
+  # get 'categories/:id' => 'categories#show'
+
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

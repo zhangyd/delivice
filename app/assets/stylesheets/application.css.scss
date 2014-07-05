@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.partial {
+	text-decoration: none;
+	
+	ul {
+	list-style: none;
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	a, a:visited, a:hover {
+	text-decoration: none;
+	color: #000000;
+	margin-top: 0px;
+	}
+}
