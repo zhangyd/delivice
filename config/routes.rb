@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   get 'items' => 'items#index'
   get 'items/new' => 'items#new'
   post 'items' => 'items#create'
+  get 'items/:id' => 'items#show'
+  resources :items, :only => [:edit, :update]
+
+  post 'items/:id/update' => 'items#update'
 
   # get 'categories/:id' => 'categories#show'
 

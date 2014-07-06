@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'devise'
 
+gem 'paperclip'
+
 # gem 'better-errors'
 gem 'quiet_assets'
 

@@ -7,6 +7,8 @@
 			<%= item.price %>
 			<%= item.subcategory_id %>
 			<%= item.unit %>
+			<%= link_to 'Show', item %>
+        	<%= link_to 'Edit', edit_item_path(item) %>
 		</li>
 	<% end %>
 </ul>
