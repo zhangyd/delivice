@@ -141,6 +141,18 @@ Item.create(:name => 'Fuji Apple', :price => 1.69, :unit => 'Each (Large)',:subc
 Item.create(:name => 'Anjou Pear (Red)', :price => 1.39, :unit => 'Each',:subcategory_id => 1)
 Item.create(:name => 'Carrot', :price => 4.99, :unit => '5 lb bag',:subcategory_id => 1)
 Item.create(:name => 'Chinese Broccoli(Gai Lan)', :price => 2.49, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Gold Delicious Apple', :price => 1.49, :unit => 'Each (Large)',:subcategory_id => 1)
+Item.create(:name => 'Asian Pear', :price => 1.39, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Kale', :price => 1.99, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Ginger Root', :price => 1.49, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Avocado', :price => 1.49, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Pepper(Green)', :price => 1.29, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Taro Root(Small)', :price => 2.99, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Snow Peas', :price => 5.19, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Raspberry', :price => 3.25, :unit => '6oz Carton',:subcategory_id => 1)
+Item.create(:name => 'Lemon', :price => 0.79, :unit => 'Each',:subcategory_id => 1)
+Item.create(:name => 'Naval Orange', :price => 1.00, :unit => 'Each (Large)',:subcategory_id => 1)
+Item.create(:name => 'Personal Watermelon', :price => 5.19, :unit => 'Each (Small)',:subcategory_id => 1)
 
 
 ### Kroger Produce Category's Fresh Fruit Subcatagory's 
@@ -216,9 +228,38 @@ Item.create(:name => 'Habanero Peppers', :price => 3.89, :unit => 'Each',:subcat
 Item.create(:name => 'Serrano Peppers', :price => 3.29, :unit => 'Each',:subcategory_id => 3)
 Item.create(:name => 'Avocado', :price => 1.49, :unit => 'Each',:subcategory_id => 3)
 
-
-
-
+### Kroger Produce Category's Packaged Produce Subcatagory's 
+Item.create(:name => 'White Mushroom', :price => 2.59, :unit => '8 oz (Whole)',:subcategory_id => 4)
+Item.create(:name => 'Large White Mushroom', :price => 6.49, :unit => '24 oz (Whole)',:subcategory_id => 4)
+Item.create(:name => 'White Sliced Mushroom', :price => 2.59, :unit => '8 oz',:subcategory_id => 4)
+Item.create(:name => 'Portobello Mushroom', :price => 4.29, :unit => '6 oz (Whole)',:subcategory_id => 4)
+Item.create(:name => 'Portobello Mushroom', :price => 4.29, :unit => '8 oz (Sliced)',:subcategory_id => 4)
+Item.create(:name => 'Baby Bella Mushroom', :price => 3.89, :unit => '8 oz (Whole)',:subcategory_id => 4)
+Item.create(:name => 'Mushroom', :price => 3.89, :unit => '8 oz (Sliced)',:subcategory_id => 4)
+Item.create(:name => 'Baby Carrots', :price => 1.99, :unit => '16 oz',:subcategory_id => 4)
+Item.create(:name => 'Caesar', :price => 4.55, :unit => '7.6 oz',:subcategory_id => 4)
+Item.create(:name => 'Classic Romain', :price => 4.55, :unit => '15 oz',:subcategory_id => 4)
+Item.create(:name => 'Shredded Lettuce', :price => 2.59, :unit => '8 oz',:subcategory_id => 4)
+Item.create(:name => 'Ultimate Caesar', :price => 4.55, :unit => '8.9 oz',:subcategory_id => 4)
+Item.create(:name => 'American Blend', :price => 3.79, :unit => '12 oz',:subcategory_id => 4)
+Item.create(:name => 'Heart of Romaine', :price => 3.79, :unit => '10 oz',:subcategory_id => 4)
+Item.create(:name => 'Sprint Mix + Baby Spinach', :price => 3.79, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Very Veggie', :price => 3.79, :unit => '12 oz',:subcategory_id => 4)
+Item.create(:name => 'Minced Garlic', :price => 3.29, :unit => '4.5 oz',:subcategory_id => 4)
+Item.create(:name => 'Shredded Carrots', :price => 2.59, :unit => '10 oz',:subcategory_id => 4)
+Item.create(:name => 'Celery Hearts (Organic)', :price => 3.89, :unit => '1 lb',:subcategory_id => 4)
+Item.create(:name => 'Romaine Hearts (Organic)', :price => 4.79, :unit => '12 oz',:subcategory_id => 4)
+Item.create(:name => 'Mini Peeled Carrots (Organic)', :price => 4.99, :unit => '2 lb',:subcategory_id => 4)
+Item.create(:name => 'Portabella Mushroom (Organic)', :price => 5.19, :unit => '6 oz (Sliced)',:subcategory_id => 4)
+Item.create(:name => 'Baby Bella Mushroom (Organic)', :price => 4.59, :unit => '8 oz (Whole)',:subcategory_id => 4)
+Item.create(:name => 'White Mushroom (Organic)', :price => 3.29, :unit => '8 oz (Whole)',:subcategory_id => 4)
+Item.create(:name => 'Baby Spinach (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Baby Kale (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Heart of Romaine', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Baby Arugula (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Baby Spring Mix (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Baby Romaine (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
+Item.create(:name => 'Organic Minced Garlic', :price => 3.89, :unit => '4.5 oz',:subcategory_id => 4)
 
 
 

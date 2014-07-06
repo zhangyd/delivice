@@ -67,20 +67,27 @@
 
 }
 .cateonleft {
-	width: 220px;
-	height: 800px;
+	width: 210px;
+	height: 92%;
 	overflow: scroll;
 	display: inline-block;
 	border-right: solid;
 	border-right-color: gray;
 	text-decoration: none;
 	margin-left: -20px;
+	position: fixed;
+	top: 8%;
+	left: 0px;
+	bottom: 0px;
+	/*background-color: #FFFFFF;*/
+	z-index: 10;
 
 	ul {
 		list-style: none;
 	}
 
 	a, a:visited{
+		text-decoration: none;
 		color: #000000;
 	}
 

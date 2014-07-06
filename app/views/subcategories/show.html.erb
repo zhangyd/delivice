@@ -23,9 +23,17 @@
 			</ul>
 		</div>
 
-		<% @items.each do |item| %>
-			<li><%= item.name %></li>
-		<% end %>
+		<div id="popitems">
+			<ul>	
+				<% @items.each do |item| %>
+					<li>
+						<%= image_tag item.picture.url(:thumb) %>
+						<p><%= item.name %></p>
+					</li>
+				<% end %>
+			</ul>
+
+		</div>
 
 	</body>
 

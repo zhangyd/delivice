@@ -27,9 +27,14 @@
 
 		
 		<div id = "popitems">
-			<% @kroger_subcategories[0].items.each do |item| %>
-			<%= item.name %>
-			<% end %>
+			<ul>
+				<% @kroger_subcategories[0].items.each do |item| %>
+					<li>
+						<%= image_tag item.picture.url(:thumb) %>
+						<p><%= item.name %></p>
+					</li>
+				<% end %>
+			</ul>
 
 		</div>
 

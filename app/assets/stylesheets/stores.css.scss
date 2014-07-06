@@ -99,6 +99,24 @@ body {
 }
 
 
+#popitems {
+	text-decoration: none;
+	width: 1050px;
+	margin-left: 210px;
+	margin-top: 80px;
+
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			width: 20%;
+			margin: 15px 2.5% 15px 2.5%;
+			float: left;
+		}
+
+	}
+}
 
 
 

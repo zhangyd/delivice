@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702203229) do
+ActiveRecord::Schema.define(version: 20140706125705) do
 
   create_table "carts", force: true do |t|
     t.integer  "user_id"
@@ -43,11 +43,15 @@ ActiveRecord::Schema.define(version: 20140702203229) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.integer  "price"
+    t.float    "price"
     t.string   "unit"
     t.integer  "subcategory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "stores", force: true do |t|
