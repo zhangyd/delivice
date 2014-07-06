@@ -7,6 +7,9 @@ class SubcategoriesController < ApplicationController
 
 	def show
 		@items = Item.where(:subcategory_id => params[:id])
+
+		@kroger_categories = Store.find(1).categories
+		@kroger_subcategories = Store.find(1).subcategories
 	end
 
 

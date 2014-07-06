@@ -12,7 +12,10 @@ class StoresController < ApplicationController
 
 
 	def kroger
-		@kroger_categories = Category.where(:store_id => 1)
+		# @kroger_categories = Category.where(:store_id => 1)
+		@kroger_categories = Store.find(1).categories
+		@kroger_subcategories = Store.find(1).subcategories
+		@kroger_items = Store.find(1).items
 	end
 
 

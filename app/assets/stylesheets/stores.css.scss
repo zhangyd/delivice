@@ -4,7 +4,7 @@ body {
 
 .chooseheader {
 	width: 100%;
-	background-color: #FFAD33;
+	background-color: orange;
 	position: fixed;
 	top: 0px;
 	margin-left: 0px;
@@ -18,13 +18,19 @@ body {
 		margin-top: 0px;
 	}
 
+	h2 {
+		display: inline-block;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
 
 	#check {
 		position: fixed;
 		right: 50px;
 		margin-top: 0px;
 		top: 10px;
-		padding-top: 10px;
+		padding-top: 5px;
 
 		li {
 			margin-left: 25px;
@@ -91,10 +97,6 @@ body {
 	text-align: center;
 	margin: auto;
 }
-
-
-/*do a change;*/
-
 
 
 
