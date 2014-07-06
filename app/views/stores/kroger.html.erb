@@ -32,6 +32,7 @@
 					<li>
 						<%= image_tag item.picture.url(:thumb) %>
 						<p><%= item.name %></p>
+						<%= link_to 'Add to Cart', "add_to_cart/#{item.id}", method: :post %>
 					</li>
 				<% end %>
 			</ul>

@@ -7,7 +7,8 @@
 			<li><%= link_to 'Whole Foods', stores_wholefoods_path %></li>
 			<li><%= link_to 'Costco', stores_costco_path %></li>
 		</ul>
-		<span id = "check1">			
+		<span id = "check1">
+			<li><%= link_to "Cart (#{current_user.carts.last.items.size})", "/carts/#{current_user.carts.last.id}"%></li>			
 			<% if user_signed_in? %>
 				<li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
 			<% else %>
