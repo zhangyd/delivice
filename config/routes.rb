@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   post 'items/:id/update' => 'items#update'
 
   post 'stores/add_to_cart/:id' => 'carts#edit'
+  post 'categories/add_to_cart/:id' => 'carts#edit'
+  post 'subcategories/add_to_cart/:id' => 'carts#edit'
 
   get 'carts/:id' => 'carts#show'
 
