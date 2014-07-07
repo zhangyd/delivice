@@ -36,7 +36,12 @@ Rails.application.routes.draw do
 
   get 'carts/:id' => 'carts#show'
 
+
+  post 'remove_from_cart/:id' => 'carts#remove'
+
   # get 'categories/:id' => 'categories#show'
+
+  # delete 'remove_from_cart/id' => 'carts#'
 
 
 

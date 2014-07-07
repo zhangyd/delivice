@@ -33,11 +33,11 @@ $(function() {
         fadePrev();
     });
 
-    $('#fader, .button').hover(function() {
-        pause = true;
-    },function() {
-        pause = true;
-    });
+    // $('#fader, .button').hover(function() {
+    //     pause = true;
+    // },function() {
+    //     pause = true;
+    // });
 
     function doRotate() {
         if(!pause) {

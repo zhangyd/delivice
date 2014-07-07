@@ -98,7 +98,35 @@
 
 
 
+#showcart {
+	width: 1050px;
+	margin-left: 210px;
+	margin-top: 80px;
+	background-color: orange;
 
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			width: 40%;
+			margin: 15px 5% 15px 5%;
+			float: left;
+			background-color: blue;
+		}
+
+	}
+
+	a, a:visited, a:hover {
+		text-decoration: none;
+		color: #000000;
+	}
+
+	#total {
+		clear: both
+	}
+
+}
 
 
 
