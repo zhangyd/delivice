@@ -6,42 +6,21 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'home#index'
-
-
-  resources :subcategories, :only => [:show, :index]
-  resources :categories, :only => [:show, :index]
-  resources :stores, :only => [:show]
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
   get 'privacy' => 'home#privacy'
   get 'terms' => 'home#terms'
 
-  get 'stores' => 'stores#index'
-  get 'stores/kroger' => 'stores#kroger'
-  get 'stores/wholefoods' => 'stores#wholefoods'
-  get 'stores/costco' => 'stores#costco'
+  resources :subcategories, :only => [:show, :index]
+  resources :categories, :only => [:show, :index]
+  resources :stores, :only => [:show, :index]
+  resources :items
+  resources :carts, :only => [:show, :index, :update]
+  # Example of regular route:
+  #   get 'products/:id' => 'catalog#view'
 
-
-  get 'items' => 'items#index'
-  get 'items/new' => 'items#new'
-  post 'items' => 'items#create'
-  get 'items/:id' => 'items#show'
-  resources :items, :only => [:edit, :update]
-  delete 'items/:id' => 'items#destroy'
-
-  post 'items/:id/update' => 'items#update'
-
-  post 'stores/add_to_cart/:id' => 'carts#edit'
-  post 'categories/add_to_cart/:id' => 'carts#edit'
-  post 'subcategories/add_to_cart/:id' => 'carts#edit'
-
-  get 'carts/:id' => 'carts#show'
-
-  get 'carts' => 'carts#index'
-
-
+  # post 'items/:id/update' => 'items#update'
+  
   post 'remove_from_cart/:id' => 'carts#remove'
+
 
 
 

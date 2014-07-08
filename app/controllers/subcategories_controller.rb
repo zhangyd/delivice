@@ -1,15 +1,9 @@
 class SubcategoriesController < ApplicationController
 	before_action :set_subcategory, only: [:show]
 
-	# def index
-	# 	@subcategories = Store.find(1).subcategories
-	# end
-
 	def show
 		@items = Item.where(:subcategory_id => params[:id])
-
-		@kroger_categories = Store.find(1).categories
-		@kroger_subcategories = Store.find(1).subcategories
+		@categories = @subcategory.category.store.categories
 	end
 
 

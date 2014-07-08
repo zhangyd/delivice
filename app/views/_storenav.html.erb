@@ -1,11 +1,11 @@
 <div class = "partial">
 	
 	<ul id="chooseheader1">	
-		<h2>Delivice</h2>
+		<a href="/"><h2>Delivice</h2></a>
 		<ul id = "stores">
-			<li><%= link_to 'Kroger', stores_kroger_path %></li>
-			<li><%= link_to 'Whole Foods', stores_wholefoods_path %></li>
-			<li><%= link_to 'Costco', stores_costco_path %></li>
+			<li><%= link_to 'Kroger', store_path(1) %></li>
+			<li><%= link_to 'Whole Foods', store_path(2) %></li>
+			<li><%= link_to 'Costco', store_path(3) %></li>
 		</ul>
 		<span id = "check1">	
 			<% if user_signed_in? %>

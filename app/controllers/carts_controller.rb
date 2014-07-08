@@ -8,18 +8,15 @@ class CartsController < ApplicationController
 		@undelivered_carts = Cart.where(:status => "paid")
 	end
 
-	def edit
+	def update
 		item = Item.find(params[:id])
 		current_user.carts.last.items << item
-
 		redirect_to :back
 	end
 
-
 	def remove
-		item = Item.find(params[:id])
-		current_user.carts.last.items.delete(item)
-
+		# item = Item.find(params[:id])
+		current_user.carts.last.items.delete(params[:id])
 		redirect_to :back
 	end
 

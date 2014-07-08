@@ -1,4 +1,3 @@
-
 <html>
 	<head>
 		<title>Delivice</title>
@@ -6,6 +5,7 @@
 
 	<body>
 		<%= render :file => "_storenav" %>
+
 
 		<div class = "cateonleft">
 			<ul>
@@ -15,7 +15,7 @@
 					<span class ="hidesub">More</span>
 					<ul class ="sub">
 						<% category.subcategories.each do |subcategory| %>
-						<li> <%= link_to subcategory.name, subcategory %> </li>
+						<li><%= link_to subcategory.name, subcategory %></li>
 						<% end %>
 					</ul>
 				</li>
@@ -23,17 +23,21 @@
 			</ul>
 		</div>
 
-		<div id="popitems">
-			<ul>	
-				<% @items.each do |item| %>
+		<div id = "popitems">
+			<ul>
+				<% @subcategories[0].items.each do |item| %>
 					<li>
 						<%= image_tag item.picture.url(:thumb) %>
-						<p><%= item.name %></p><%= link_to 'Add to Cart', "/carts/#{item.id}", method: :put %>
+						<p><%= item.name %></p>
+						<span><%= item.unit %></span>
+						<span><%= "$#{item.price}"%></span>
+						<p><%= link_to 'Add to Cart', "/carts/#{item.id}", method: :put %></p>
 					</li>
 				<% end %>
 			</ul>
 
 		</div>
+
 
 	</body>
 
