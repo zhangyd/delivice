@@ -10,6 +10,8 @@ class CategoriesController < ApplicationController
 		@subcategories = Subcategory.where(:category_id => params[:id])
 		@kroger_categories = Store.find(1).categories
 		@kroger_subcategories = Store.find(1).subcategories
+		@wholefoods_categories = Store.find(2).categories
+		@wholefoods_subcategories = Store.find(2).subcategories
 	end
 
 

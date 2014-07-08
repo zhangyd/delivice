@@ -29,7 +29,6 @@ costco = Store.create(:name => "Costco", :location => "771 Airport Blvd, Pittsfi
 
 # Kroger Store Categories
 categories = ["Popular","Produce","Meat & Seafood","Dairy & Eggs","Breakfast","Canned Products","Bakery","Beverage","Frozen","International","Dry Goods & Pasta","Pantry","Snacks","Household","Personal Care","Baby Care","Pets"]
-
 categories.each do |category|
 	Category.create(:name => category, :store_id => 1)
 end
@@ -86,7 +85,7 @@ frozens.each do |frozen|
 end
 
 
-internationals = ['Aisan Food','Latino Food','More International']
+internationals = ['Asian Food','Latino Food','More International']
 internationals.each do |international|
 	Subcategory.create(:name => international, :category_id => 10)
 end
@@ -260,6 +259,197 @@ Item.create(:name => 'Baby Arugula (Organic)', :price => 3.99, :unit => '5 oz',:
 Item.create(:name => 'Baby Spring Mix (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
 Item.create(:name => 'Baby Romaine (Organic)', :price => 3.99, :unit => '5 oz',:subcategory_id => 4)
 Item.create(:name => 'Organic Minced Garlic', :price => 3.89, :unit => '4.5 oz',:subcategory_id => 4)
+
+
+
+
+
+
+
+
+
+# Whole Foods Store Categories
+categories = ['Popular','Produce','Meat & Seafood','Deli','Bakery','Dairy & Eggs','Bulk','Canned Goods','Dry Goods & Pasta','Pantry','International','Beverages','Breakfast','Snacks','Frozen','Personal Care','Babies','Pets','Household']
+categories.each do |category|
+	Category.create(:name => category, :store_id => 2)
+end
+
+## Whole Foods Category's Subcatagories
+Subcategory.create(:name => 'popular', :category_id => 18)
+
+produces = ['Fresh Fruits','Fresh Vegetables','Fresh Herbs','Packaged Fruit & Vegetables','Tofu & Meat Alternatives']
+produces.each do |produce|
+	Subcategory.create(:name => produce, :category_id => 19)
+end
+
+meats = ['Meat Counter','Poultry Counter','Seafood Counter','Packaged Meat','Packaged Poultry','Packaged Seafood','Hot Dogs & Bacon & Sausage']
+meats.each do |meat|
+	Subcategory.create(:name => meat, :category_id => 20)
+end
+
+
+delis = ['Lunch Meat','Specialty Cheese','Prepared Meals','Prepared Soup & Salad','Fresh Dips & Tapenades','Tofu & Meat Alternatives']
+delis.each do |deli|
+	Subcategory.create(:name => deli, :category_id => 21)
+end
+
+bakeries = ['Bread','Tortillas & Flat Bread','Buns & Rolls','Breakfast Bakery','Bakery Desserts']
+bakeries.each do |bakery|
+	Subcategory.create(:name => bakery, :category_id => 22)
+end 
+
+dairys = ['Milk','Cream','Eggs','Packaged Cheese','Yogurt','Butter','Other Cream & Cheese']
+dairys.each do |dairy|
+	Subcategory.create(:name => dairy, :category_id => 23)
+end
+
+bulks = ['Grains, Rice & Dried Goods','Bulk Butters, Honey & Spreads']
+bulks.each do |bulk|
+	Subcategory.create(:name => bulk, :category_id => 24)
+end
+
+canns = ['Canned Fruit & Applesauce','Canned & Jarred Vegetables','Canned Meals & Beans']
+canns.each do |can|
+	Subcategory.create(:name => can, :category_id => 25)
+end
+
+dries = ['Dry Pasta','Fresh Pasta','Pasta Sauce','Instant Foods','Grains, Rice & Dried Goods']
+dries.each do |dry|
+	Subcategory.create(:name => dry, :category_id => 26)
+end
+
+pantries = ['Condiments','Honeys, Syrups & Nectar','Spices & Seasonings','Spreads']
+pantries.each do |pantry|
+	Subcategory.create(:name => pantry, :category_id => 27)
+end
+
+internationals = ['Asian Foods','Latino Foods','Indian Foods','Kosher Foods']
+internationals.each do |international|
+	Subcategory.create(:name => international, :category_id => 28)
+end
+
+beverages = ['Coffee','Refrigerated','Tea','Juice & Nectars','Energy & Sports Drinks','Soft Drinks']
+beverages.each do |beverage|
+	Subcategory.create(:name => beverage, :category_id => 29)
+end
+
+breakfasts = ['Cereal','Hot Cereal & Pancake Mixes','Granola','Breakfast Bars & Pastris']
+breakfasts.each do |breakfast|
+	Subcategory.create(:name => breakfast, :category_id => 30)
+end
+
+snacks = ['Candy & Chocolate','Chips & Pretzels','Cookies & Cakes','Crackers','Energy & Granola Bars']
+snacks.each do |snack|
+	Subcategory.create(:name => snack, :category_id => 31)
+end
+
+frozens = ['Frozen Breakfast','Frozen Appetizers & Sides','Frozen Meals','Frozen Meat & Seafood']
+frozens.each do |frozen|
+	Subcategory.create(:name => frozen, :category_id => 32)
+end 
+
+personals = ['Facial Care','Deodorants','Body Lotions & Soap','Shave Needs','Oral Hygiene']
+personals.each do |personal|
+	Subcategory.create(:name => personal, :category_id => 33)
+end 
+
+babies = ['Baby Bath & Body Care','Baby Food & Formula','Diapers & Wipes','Baby First Aid & Vitamins']
+babies.each do |baby|
+	Subcategory.create(:name => baby, :category_id => 34)
+end 
+
+pets = ['Cat Food & Care','Dog Food & Care']
+pets.each do |pet|
+	Subcategory.create(:name => pet, :category_id => 35)
+end 
+
+households = ['Aire Fresheners & Candles','Cleaning Products','Dish Detergents','Food Storage']
+households.each do |household|
+	Subcategory.create(:name => household, :category_id => 36)
+end
+
+
+### Whole Foods Popular Category's popular Subcatagory's 
+Item.create(:name => '365 Organic Coconut Milk', :price => 2.19, :unit => '13.5 oz',:subcategory_id => 98)
+Item.create(:name => 'San J Reduced Sodium Tamari Soy Sauce ', :price => 3.39, :unit => '10 fl oz',:subcategory_id => 98)
+Item.create(:name => 'NaSoya Wonton Wrappers', :price => 2.59, :unit => '12 oz',:subcategory_id => 98)
+Item.create(:name => 'San J Organic Reduced Sodium Gluten Free Tamari Soy Sauce', :price => 3.69, :unit => '20 oz',:subcategory_id => 98)
+Item.create(:name => 'Star Anise Foods Brown Rice Spring Roll Wrappers', :price => 4.19, :unit => '8 oz',:subcategory_id => 98)
+Item.create(:name => 'Annie Chun\'s Pad Thai Rice Noodles', :price => 3.19, :unit => '8 oz',:subcategory_id => 98)
+Item.create(:name => 'Hatch Select Diced Peeled Green Chiles', :price => 2.39, :unit => '4 oz',:subcategory_id => 98)
+Item.create(:name => '365 Organic Refried Pinto Beans ', :price => 1.49, :unit => '15 oz',:subcategory_id => 98)
+Item.create(:name => 'Frontera Mexico Taco Chicken Seasoning Skillet Sauce ', :price => 2.69, :unit => '8 oz',:subcategory_id => 98)
+Item.create(:name => 'Hatch Medium Enchilada Sauce ', :price => 3.99, :unit => '15 oz',:subcategory_id => 98)
+Item.create(:name => 'Dr. McDougall\'s Pad Thai Noodle Entree ', :price => 1.79, :unit => '2 oz',:subcategory_id => 98)
+Item.create(:name => 'Kikkoman International Inc Organic Naturally Brewed Soy Sauce', :price => 3.39, :unit => '10 fl oz',:subcategory_id => 98)
+Item.create(:name => 'Herdez Chipotle Peppers', :price => 1.69, :unit => '7 oz',:subcategory_id => 98)
+
+
+### Whole Foods International Category's Asian Subcatagory's 
+Item.create(:name => '365 Organic Coconut Milk', :price => 2.19, :unit => '13.5 oz',:subcategory_id => 143)
+Item.create(:name => '365 Organic Lite Coconut Milk', :price => 1.49, :unit => '13.5 oz',:subcategory_id => 143)
+Item.create(:name => 'San J Reduced Sodium Tamari Soy Sauce ', :price => 3.39, :unit => '10 fl oz',:subcategory_id => 143)
+Item.create(:name => 'Thai Kitchen Green Curry Paste', :price => 3.69, :unit => '4 oz',:subcategory_id => 143)
+Item.create(:name => 'Reese Sliced Water Chestnuts', :price => 1.19, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'San J Tamari Soy Sauce', :price => 2.79, :unit => '10 fl oz',:subcategory_id => 143)
+Item.create(:name => 'Reese Fancy Sliced Bamboo Shoots', :price => 1.19, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Koyo Reduced Sodium Garlic Pepper Ramen', :price => 1.39, :unit => '2.1 oz',:subcategory_id => 143)
+Item.create(:name => 'Annie Chun\'s Roasted Wasabi Seaweed Snacks', :price => 1.99, :unit => '.35 oz',:subcategory_id => 143)
+Item.create(:name => 'Annie Chun\'s Hot & Sour Soup Bowl', :price => 2.99, :unit => '5.5 oz',:subcategory_id => 143)
+Item.create(:name => 'Thai Kitchen Coconut Milk Organic', :price => 2.99, :unit => '13.66 fl oz',:subcategory_id => 143)
+Item.create(:name => 'Sunja\'s Cabbage Kimchee', :price => 5.39, :unit => '16 oz',:subcategory_id => 143)
+Item.create(:name => 'Ka Me Rice Stick Noodles', :price => 3.39, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Koyo Organic Wide Udon Asian Pasta', :price => 2.69, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'NaSoya Wonton Wrappers', :price => 2.59, :unit => '12 oz',:subcategory_id => 143)
+Item.create(:name => 'Dr. McDougall\'s Pad Thai Noodle Entree ', :price => 1.79, :unit => '2 oz',:subcategory_id => 143)
+Item.create(:name => 'San J Organic Shoyu Soy Sauce', :price => 3.39, :unit => '10 fl oz',:subcategory_id => 143)
+Item.create(:name => 'San J Szechwan Stir Fry Marinade Sauce ', :price => 4.39, :unit => '10 fl oz',:subcategory_id => 143)
+Item.create(:name => 'Thai Kitchen Organic Lite Coconut Milk', :price => 2.59, :unit => '13.66 fl oz',:subcategory_id => 143)
+Item.create(:name => 'Annie Chun\'s Spicy Chicken Ramen', :price => 1.79, :unit => '4.7 oz',:subcategory_id => 143)
+Item.create(:name => 'San J Organic Reduced Sodium Gluten Free Tamari Soy Sauce', :price => 3.69, :unit => '20 oz',:subcategory_id => 143)
+Item.create(:name => 'Star Anise Foods Brown Rice Spring Roll Wrappers', :price => 4.19, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Thai Kitchen Lite Coconut Milk', :price => 2.69, :unit => '13.66 fl oz',:subcategory_id => 143)
+Item.create(:name => 'JFC Roasted White Sesame Seeds', :price => 5.39, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Eden Foods Toasted Sushi Nori', :price => 6.99, :unit => '.6 oz',:subcategory_id => 143)
+Item.create(:name => 'Eden Foods Buckwheat Soba', :price => 7.99, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Emerald Cove Nori', :price => 5.99, :unit => '10 ct',:subcategory_id => 143)
+Item.create(:name => 'Thai Kitchen Lemongrass', :price => 5.39, :unit => '.31 oz',:subcategory_id => 143)
+Item.create(:name => 'Lee Kum Kee Black Bean Garlic Sauce ', :price => 3.39, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Star Anise Foods Happy Pho Zesty Ginger Noodle Soup', :price => 4.39, :unit => '4.5 oz',:subcategory_id => 143)
+Item.create(:name => 'Kikkoman International Inc Organic Naturally Brewed Soy Sauce', :price => 3.39, :unit => '10 fl oz',:subcategory_id => 143)
+Item.create(:name => 'San J Soy Tamari Sauce', :price => 4.39, :unit => '20 oz',:subcategory_id => 143)
+Item.create(:name => 'Annie Chun\'s Pad Thai Rice Noodles', :price => 3.19, :unit => '8 oz',:subcategory_id => 143)
+Item.create(:name => 'Tasty Bite Thai Basil Instant Asian Noodles', :price => 2.29, :unit => '8.8 oz',:subcategory_id => 143)
+Item.create(:name => 'San J Sweet & Tangy Sauce', :price => 1.69, :unit => '10 oz',:subcategory_id => 143)
+Item.create(:name => 'Eden Organic Brown Rice Vinegar', :price => 5.99, :unit => '10 oz',:subcategory_id => 143)
+
+### Whole Foods International Category's Latino Subcatagory's 
+Item.create(:name => '365 Organic Refried Black Beans ', :price => 1.49, :unit => '15 oz',:subcategory_id => 144)
+Item.create(:name => 'Garden Of Eatin\' Organic Yellow Taco Shells', :price => 3.39, :unit => '5.5 oz',:subcategory_id => 144)
+Item.create(:name => 'Frontera Classic Fajita All Purpose Seasoning Skillet Sauce', :price => 2.69, :unit => '8 oz',:subcategory_id => 144)
+Item.create(:name => 'Frontera Chipotle Garlic Taco Skillet Sauce ', :price => 2.69, :unit => '8 oz',:subcategory_id => 144)
+Item.create(:name => 'Amy\'s Organic Light In Sodium Refried Black Beans ', :price => 2.99, :unit => '15.4 oz',:subcategory_id => 144)
+Item.create(:name => '365 Organic Chili & Lime Refried Pinto Beans ', :price => 1.49, :unit => '15 oz',:subcategory_id => 144)
+Item.create(:name => 'Herdez Chipotle Peppers', :price => 1.69, :unit => '7 oz',:subcategory_id => 144)
+Item.create(:name => 'Hatch Select Diced Peeled Green Chiles', :price => 2.39, :unit => '4 oz',:subcategory_id => 144)
+Item.create(:name => 'Herdez Hot Salsa Casera', :price => 3.29, :unit => '16 oz',:subcategory_id => 144)
+Item.create(:name => 'Frontera Red Chili Beef Barbacoa Slow Cooking Sauce ', :price => 2.69, :unit => '8 oz',:subcategory_id => 144)
+Item.create(:name => 'Amy\'s Organic Light In Sodium Traditional Refried Beans ', :price => 2.99, :unit => '15.4 oz',:subcategory_id => 144)
+Item.create(:name => '365 Organic Refried Pinto Beans ', :price => 1.49, :unit => '15 oz',:subcategory_id => 144)
+Item.create(:name => 'Frontera Mexico Taco Chicken Seasoning Skillet Sauce ', :price => 2.69, :unit => '8 oz',:subcategory_id => 144)
+Item.create(:name => 'Frontera Spicy Guacamole Mix Pouch', :price => 1.99, :unit => '4.5 oz',:subcategory_id => 144)
+Item.create(:name => 'Hatch Medium Enchilada Sauce ', :price => 3.99, :unit => '15 oz',:subcategory_id => 144)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

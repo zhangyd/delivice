@@ -1,0 +1,20 @@
+
+<html>
+	<head>
+		<title>Delivice</title>
+	</head>
+
+	<body>
+		
+		<% @undelivered_carts.each do |cart| %>
+			<%= cart.user.first_name %>
+			<% cart.items.each do |item| %>
+				<%= item.name %>
+			<% end %>
+		<% end %>
+
+
+
+
+	</body>
+</html>

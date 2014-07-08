@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :subcategories, :only => [:show, :index]
   resources :categories, :only => [:show, :index]
+  resources :stores, :only => [:show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -37,8 +38,12 @@ Rails.application.routes.draw do
 
   get 'carts/:id' => 'carts#show'
 
+  get 'carts' => 'carts#index'
+
 
   post 'remove_from_cart/:id' => 'carts#remove'
+
+
 
   # get 'categories/:id' => 'categories#show'
 
