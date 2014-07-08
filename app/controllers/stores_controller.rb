@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+	
 
 	def index
 		# @kroger_categories = Store.find(1).categories

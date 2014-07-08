@@ -7,8 +7,8 @@
 
 	<body>
 
-		<div class="button" id="next">Next</div>
-		<div class="button" id="prev">Prev</div>
+		<div class="button" id="next"><%= image_tag "down.png"%></div>
+		<div class="button" id="prev"><%= image_tag "up.png"%></div>
 
 
 		<ul class="header">	
@@ -32,11 +32,10 @@
 		<div id="fader">
 
 			<!-- BEGIN: first page dive -->
-			<div class="first">
+			<div id="first">
 				<h1>Care For Your Body. Care For Your Mind<br>Care For Your Time</h1>
 				<h2><%= link_to 'Start Shopping', stores_path %></h2>
-				<p>free delivery for orders over 40 dollers</p>
-
+				<p>free delivery for orders over 40 dollars</p>
 			</div>
 			<!-- END: first page dive -->
 
@@ -63,7 +62,7 @@
 
 				</ul>
 				<h2><%= link_to 'Start Shopping', stores_path %></h2>
-				<p>free delivery for orders over 40 dollers</p>
+				<p>free delivery for orders over 40 dollars</p>
 
 			</div>
 			<!-- END: second page dive -->
@@ -92,12 +91,16 @@
 						<img src="assets/pay.png">
 						<h3>Pay Online</h3>
 					</li>
+					<li id="middle">
+						<span><h2><%= link_to 'Start Shopping', stores_path %></h2>
+						<p>free delivery for orders over 40 dollars</p></span>
+					</li>
 					<li>
 						<img src="assets/deliver.png">
 						<h3>Answer Your Door</h3>
 					</li>
 				</ul>
-
+				
 
 			</div>
 			<!-- END: third page dive -->
@@ -106,7 +109,7 @@
 
 			<!-- BEGIN: forth page dive -->
 			<div id="forth">
-				<h1>What Our Customre Are Saying</h1>
+				<h1>What Our Customer Are Saying</h1>
 
 				<ul>
 					<li>
@@ -123,7 +126,8 @@
 					</li>
 
 				</ul>
-
+				<h2><%= link_to 'Start Shopping', stores_path %></h2>
+				<p>free delivery for orders over 40 dollars</p>
 			</div>
 			<!-- END: forth page dive -->
 

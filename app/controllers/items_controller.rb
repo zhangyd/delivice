@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
-	before_action :set_item, only: [:show, :edit, :update]
+	before_action :set_item, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user! 
+	before_action :authenticate_admin!
 
 	def index
 		@items = Item.all
@@ -12,8 +14,8 @@ class ItemsController < ApplicationController
 
 
 	def create
-		@item = Item.new(item_params)
-		@item.save
+		@item = Item.create(item_params)
+		# @item.save
 		redirect_to items_path
 	end
 
@@ -23,6 +25,11 @@ class ItemsController < ApplicationController
 
 
 	def edit		
+	end
+
+	def destroy
+		@item.destroy
+		redirect_to :back
 	end
 
 
@@ -48,5 +55,7 @@ class ItemsController < ApplicationController
 	def set_item
 		@item = Item.find(params[:id])
 	end
+
+
 
 end

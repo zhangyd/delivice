@@ -14,14 +14,15 @@ $(function() {
     });
     
     var pause = true;
-    
+
+
     function fadeNext() {
-        $('#fader div').first().fadeOut().appendTo($('#fader'));
+        $('#fader div').first().fadeOut(1000).appendTo($('#fader'));
         $('#fader div').first().fadeIn();
     }
 
     function fadePrev() {
-        $('#fader div').first().fadeOut();
+        $('#fader div').first().fadeOut(1000);
         $('#fader div').last().prependTo($('#fader')).fadeIn();
     }
 

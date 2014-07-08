@@ -29,4 +29,11 @@ class ApplicationController < ActionController::Base
     	devise_parameter_sanitizer.for(:account_update) << :state
     	devise_parameter_sanitizer.for(:account_update) << :zipcode
 	end
+
+    def authenticate_admin!
+        unless (user_signed_in? && current_user.role == "admin")
+            flash[:alert] = "Admin Access Only"
+            redirect_to root_path
+        end
+    end
 end

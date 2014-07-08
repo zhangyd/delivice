@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   post 'items' => 'items#create'
   get 'items/:id' => 'items#show'
   resources :items, :only => [:edit, :update]
+  delete 'items/:id' => 'items#destroy'
 
   post 'items/:id/update' => 'items#update'
 

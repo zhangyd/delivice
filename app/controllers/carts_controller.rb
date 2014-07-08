@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
 	before_action :set_cart, only: [:show, :remove]
+	before_action :authenticate_user!, :only => [:edit,:remove]
 
 	def edit
 		item = Item.find(params[:id])
