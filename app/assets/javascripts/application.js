@@ -19,4 +19,6 @@ $(document).ready(function(){
 	$(".hidesub").click(function(){
 		$(".sub").toggle()
 	});
+
+	$('#choosestore').hide().fadeIn(700)
 });

@@ -4,10 +4,11 @@
 	<head>
 		<title>Delivice</title>
 	</head>
-	<body>
-    
-		<ul class="chooseheader">	
-			<h2>Delivice</h2>
+	
+	
+	<body id="alltogether">
+		<ul class="header">	
+			<a href="/"><h2>Delivice</h2></a>
 			<span id="check">
 				
 				<% if user_signed_in? %>
@@ -37,7 +38,23 @@
 			<% Cart.create(:user_id => current_user.id, :status => "shopping") %>
 		<% end %>
 
+		
+		<!-- BEGIN: footer that always stay at the bottom -->
+		 <ul class="footer">
+			<span class="legal">
+				<li>&copy; 2014</li>
+				<li><%= link_to "Privacy", privacy_path %></li>
+				<li><%= link_to "Terms", terms_path %></li>
+			</span>
+			<span class="icons">
+				<li><%= link_to image_tag('facebook.png', :class => "fb"), "http://www.facebook.com", :target=> "_blank" %></li>
+				<li><%= link_to image_tag('twitter.png', :class => "tw"), "http://www.twitter.com", :target=> "_blank" %></li>
+			</span>
+		</ul> 
+		
+		<!-- END: footer that always stay at the bottom -->
+
 
 	</body>
-
+	
 </html>

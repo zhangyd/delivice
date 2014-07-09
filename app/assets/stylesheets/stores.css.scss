@@ -1,51 +1,18 @@
-body {
-	margin: 0px;
+html {
+	height: 100%;
 }
 
-.chooseheader {
-	width: 100%;
-	background-color: orange;
-	position: fixed;
-	top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+#alltogether {
+	background: url(../assets/first.jpg) no-repeat center;
+	background-size: 100%;
+	z-index: -10;
 	color: #FFFFFF;
-	margin-top: 0px;
-
-	list-style: none;
-	li {
-		display: inline-block;
-		margin-top: 0px;
-	}
-
-	h2 {
-		display: inline-block;
-		margin-top: 12px;
-		margin-bottom: 12px;
-	}
-
-
-	#check {
-		position: fixed;
-		right: 50px;
-		margin-top: 0px;
-		top: 10px;
-		padding-top: 5px;
-
-		li {
-			margin-left: 25px;
-			font-size: 1.2em;
-		}
-		
-	}
-
-	a, a:visited, a:hover {
-		text-decoration: none;
-		color: #FFFFFF;
-		margin-top: 0px;
-	}
-
+	text-align: center;
+	margin-bottom: 0px;
+	bottom: 0px;
 }
+
+
 
 #choosestore {
 	margin-top: 130px;
