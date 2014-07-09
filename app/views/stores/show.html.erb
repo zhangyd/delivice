@@ -4,7 +4,30 @@
 	</head>
 
 	<body>
-		<%= render :file => "_storenav" %>
+		
+
+
+	<div class = "partial">
+		<ul id="chooseheader1">	
+			<a href="/"><h2>Delivice</h2></a>
+				<ul id = "stores">
+					<li><%= link_to "#{Store.find(params[:id]).name}" %></li>
+					<li><%= link_to 'Switch Store', stores_path() %></li>
+				</ul>
+			<span id = "check1">	
+				<% if user_signed_in? %>
+					<li><%= link_to "Cart (#{current_user.carts.last.items.size})", "/carts/#{current_user.carts.last.id}"%></li>		
+					<li><%= "Welcome, #{current_user.first_name}" %></li>
+					<li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+				<% else %>
+					<li><%= link_to "Sign Up", new_user_registration_path %></li>
+					<li><%= link_to "Sign In", new_user_session_path %></li>
+				<% end %>
+			</span>
+		</ul>
+	</div>
+
+
 
 
 		<div class = "cateonleft">

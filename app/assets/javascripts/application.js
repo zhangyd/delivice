@@ -20,5 +20,6 @@ $(document).ready(function(){
 		$(".sub").toggle()
 	});
 
-	$('#choosestore').hide().fadeIn(700)
+	$('#choosestore').hide().fadeIn(500)
+	
 });

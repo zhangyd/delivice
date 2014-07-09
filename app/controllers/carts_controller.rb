@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
 	before_action :set_cart, only: [:show, :remove]
-	before_action :authenticate_user!, :only => [:edit,:remove]
+	before_action :authenticate_user!, :only => [:update,:remove]
 	before_action :authenticate_admin!, :only => :index
 
 	def index
@@ -15,10 +15,13 @@ class CartsController < ApplicationController
 	end
 
 	def remove
-		# item = Item.find(params[:id])
-		current_user.carts.last.items.delete(params[:id])
+		#item = Item.find(params[:id])
+		current_user.carts.last.items.delete(params[:id]) 
 
-		#current_user.carts.last.items.delete_at()
+		# items = current_user.carts.last.items
+		# items.delete_at(items.index(item) || items.length)
+
+		#current_user.carts.last.items.delete_at(current_user.carts.last.items.index(item) || current_user.carts.last.items.length)
 
 		redirect_to :back
 	end

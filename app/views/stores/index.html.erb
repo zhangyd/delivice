@@ -7,6 +7,8 @@
 	
 	
 	<body id="alltogether">
+
+		<!-- BEGIN: Header that always stay at the top -->
 		<ul class="header">	
 			<a href="/"><h2>Delivice</h2></a>
 			<span id="check">
@@ -21,18 +23,21 @@
 
 			</span>
 		</ul>
+		<!-- END: header that always stay at the bottom -->
 
 
-		<div id ="choosestore">
+
+		<div id ="choosestore"/>
 			<h1>Choose Your Store</h1>
-			<div id="tryingtocenter">
-				<ul>
-					<li><%= link_to 'Kroger', store_path(1) %></li>
-					<li><%= link_to 'Whole Foods', store_path(2) %></li>
-					<li><%= link_to 'Costco', store_path(3) %></li>
-				</ul>
-			</div>
-		</div>
+			<ul>
+				<a href= "/stores/1"><li><%= image_tag 'kroger.png', size: "200x200" %></li></a>
+				<a href= "/stores/2"><li><%= image_tag 'wholefoods.png', size: "200x200" %></li></a>
+				<a href= "/stores/3"><li><%= image_tag 'Costco.png', size: "200x200" %></li></a>
+			</ul>
+
+		</div> 
+
+
 
 		<% if user_signed_in? && ((current_user.carts) == [] ||current_user.carts.last[:status] != "shopping" )%>
 			<% Cart.create(:user_id => current_user.id, :status => "shopping") %>
@@ -51,7 +56,6 @@
 				<li><%= link_to image_tag('twitter.png', :class => "tw"), "http://www.twitter.com", :target=> "_blank" %></li>
 			</span>
 		</ul> 
-		
 		<!-- END: footer that always stay at the bottom -->
 
 
