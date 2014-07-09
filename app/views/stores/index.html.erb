@@ -1,13 +1,11 @@
 <!DOCTYPE html> 
 
-
-
 <html>
 	<head>
 		<title>Delivice</title>
 	</head>
 	<body>
-
+    
 		<ul class="chooseheader">	
 			<h2>Delivice</h2>
 			<span id="check">
@@ -23,9 +21,9 @@
 			</span>
 		</ul>
 
+
 		<div id ="choosestore">
 			<h1>Choose Your Store</h1>
-
 			<div id="tryingtocenter">
 				<ul>
 					<li><%= link_to 'Kroger', store_path(1) %></li>
@@ -38,7 +36,6 @@
 		<% if user_signed_in? && ((current_user.carts) == [] ||current_user.carts.last[:status] != "shopping" )%>
 			<% Cart.create(:user_id => current_user.id, :status => "shopping") %>
 		<% end %>
-
 
 
 	</body>

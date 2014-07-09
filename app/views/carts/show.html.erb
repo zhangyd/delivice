@@ -8,23 +8,6 @@
 
 		<%= render :file => "_storenav" %>
 
-		<div class = "cateonleft">
-			<ul>
-				<% @kroger_categories.each do |category| %>
-				<li>
-					<%= link_to category.name, category %>
-					<span class ="hidesub">More</span>
-					<ul class ="sub">
-						<% category.subcategories.each do |subcategory| %>
-						<li> <%= link_to subcategory.name, subcategory %> </li>
-						<% end %>
-					</ul>
-				</li>
-				<% end %>
-			</ul>
-		</div>
-
-
 
 		<div id = "showcart">
 			<h1>My Cart</h1>
@@ -52,6 +35,8 @@
 			<div id = "total">
 				<%= "Total Price: $#{total.round(2)}" %>
 			</div>
+
+			<%= link_to 'Check Out Now', "/charges/new?amount=#{total}" %>
 		</div>
 
 

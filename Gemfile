@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # gem 'rails_12factor', group: :production
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'devise'
 
 gem 'paperclip'

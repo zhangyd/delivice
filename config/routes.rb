@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   post 'remove_from_cart/:id' => 'carts#remove'
 
 
+  # Stripe Route
+  resources :charges
 
 
   # get 'categories/:id' => 'categories#show'

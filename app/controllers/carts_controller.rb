@@ -22,8 +22,8 @@ class CartsController < ApplicationController
 
 
 	def show
-		@kroger_categories = Store.find(1).categories
-		@kroger_subcategories = Store.find(1).subcategories
+		# @kroger_categories = Store.find(1).categories
+		# @kroger_subcategories = Store.find(1).subcategories
 	end
 
 
