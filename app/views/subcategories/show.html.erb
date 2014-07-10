@@ -51,7 +51,8 @@
 				<% @items.each do |item| %>
 					<li>
 						<%= image_tag item.picture.url(:thumb) %>
-						<p><%= item.name %></p><%= link_to 'Add to Cart', "/carts/#{item.id}", method: :put %>
+						<p><%= item.name %></p><%= link_to 'Add to Cart', "/ownerships?item_id=#{item.id}&cart_id=#{current_user.carts.last.id}", method: :post %>
+						<p><%= link_to 'Remove', "/ownerships/:id?item_id=#{item.id}&cart_id=#{current_user.carts.last.id}", method: :delete %></p>
 					</li>
 				<% end %>
 			</ul>

@@ -11,27 +11,22 @@
 
 		<div id = "showcart">
 			<h1>My Cart</h1>
-
-			<% myitems = {} %>
+			
 			<% total = 0 %>
-			<% @cart.items.each do |item| %>
-				<% if myitems[item] == nil %>
-					<% myitems[item] = 1%>
-				<% else %>
-					<% myitems[item] = myitems[item] + 1%>
-				<% end %>
-			<% end %>
-
+		
 			<ul>
-				<% myitems.each do |item,quantity| %>
-					<li>
-						<%= image_tag item.picture.url(:thumb) %>
-						<p><%= "#{item.name}" %><%= quantity %></p>
-						<%= link_to 'Remove', "/remove_from_cart/#{item.id}", method: "post" %>
-					</li>
-					<% total = total + item.price * quantity %>
+				<% @cart.ownerships.each do |ownership| %>
+				<li>	
+					<%= image_tag Item.find(ownership.item_id).picture.url(:thumb) %>
+					<%= Item.find(ownership.item_id).name %>
+					<%= ownership.quantity %>
+				</li>
+					<% total = total + Item.find(ownership.item_id).price * ownership.quantity %>
 				<% end %>
 			</ul>
+
+
+
 			<div id = "total">
 				<%= "Total Price: $#{total.round(2)}" %>
 			</div>

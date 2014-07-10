@@ -9,21 +9,21 @@ Rails.application.routes.draw do
   get 'privacy' => 'home#privacy'
   get 'terms' => 'home#terms'
 
+  # Stripe Route
+  resources :charges
+
   resources :subcategories, :only => [:show, :index]
   resources :categories, :only => [:show, :index]
   resources :stores, :only => [:show, :index]
   resources :items
-  resources :carts, :only => [:show, :index, :update]
+  resources :carts, :only => [:show, :index]
+  resources :ownerships, :only => [:new, :create, :destroy]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # post 'items/:id/update' => 'items#update'
-  
-  post 'remove_from_cart/:id' => 'carts#remove'
 
 
-  # Stripe Route
-  resources :charges
 
 
   # get 'categories/:id' => 'categories#show'

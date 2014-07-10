@@ -8,28 +8,8 @@ class CartsController < ApplicationController
 		@undelivered_carts = Cart.where(:status => "paid")
 	end
 
-	def update
-		item = Item.find(params[:id])
-		current_user.carts.last.items << item
-		redirect_to :back
-	end
-
-	def remove
-		#item = Item.find(params[:id])
-		current_user.carts.last.items.delete(params[:id]) 
-
-		# items = current_user.carts.last.items
-		# items.delete_at(items.index(item) || items.length)
-
-		#current_user.carts.last.items.delete_at(current_user.carts.last.items.index(item) || current_user.carts.last.items.length)
-
-		redirect_to :back
-	end
-
 
 	def show
-		# @kroger_categories = Store.find(1).categories
-		# @kroger_subcategories = Store.find(1).subcategories
 	end
 
 
