@@ -49,8 +49,8 @@
 
 		<div id ="popitems">
 			<% @subcategories.each do |subcategory| %>
-				<li>
-					<strong><%= link_to subcategory.name, subcategory %></strong>
+				<li id="cate_list">
+					<span id="title"><strong><%= link_to subcategory.name, subcategory %></strong></span>
 					<%= link_to "View More", subcategory %>
 					<ul>
 						<% subcategory.items.each_with_index do |item,index| %>

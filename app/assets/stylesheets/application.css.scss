@@ -173,9 +173,13 @@
 			padding: 8px 15px;
 			border-radius: 15px;
 		}
-		p{
+/*		p{
 			margin-top: 200px;
-		}
+		}*/
+	}
+	#form {
+		font-size: 1.5em;
+		
 	}
 
 }
@@ -270,7 +274,7 @@ html{
 }
 
 
-
+ 
 #paid_page {
 	background-color: orange;
 	text-align: center;
@@ -284,7 +288,10 @@ html{
 	font-size: 1.2em;
 }
 
-
+#devicse_pages {
+	text-align: center;
+	background-color: orange;
+}
 
 
 

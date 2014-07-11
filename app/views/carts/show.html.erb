@@ -46,6 +46,19 @@
 				<% total = total + Item.find(ownership.item_id).price * ownership.quantity %>
 			<% end %>
 		</ul>
+
+		<div id="form">
+		<%= form_for(@cart) do |f| %>
+
+		  <div class="field">
+		    <%= f.label "Please Choose Your Delivery Date and Time" %><br>
+		    <%= f.datetime_select :delivery_date %>
+		  </div>
+
+		<% end %>
+		</div>
+
+
 		<div id = "total">
 			<p><%= "Total Price: $#{total.round(2)}" %></p>
 			<span id="checkout"><%= link_to 'Check Out Now', "/charges/new?amount=#{total.round(2)}" %></span>

@@ -40,6 +40,21 @@ html {
 	width: 1050px;
 	margin-left: 180px;
 	margin-top: 80px;
+	#cate_list{
+		list-style: none;
+		margin-left: 40px;
+		#title{
+			font-size: 1.6em;
+		}
+		a,a:visited {
+			color:black;
+			text-decoration: none;
+		}
+		a:hover{
+			color: orange;
+			text-decoration: none;
+		}
+	}
 	h1{
 		border-style: solid;
 		border-color: orange;
