@@ -6,33 +6,57 @@
 
 	<body>
 
-		<%= render :file => "_storenav" %>
+	<div class = "storenavigation">
+		<ul>	
+			<a href="/"><h2>Delivice</h2></a>
+					<li id="cart_icon"><%= image_tag 'cart.png', size: "40x40" %></li>
+					<li id="current_store"><%= link_to 'Continue Shopping', stores_path() %></li>
 
-
-		<div id = "showcart">
-			<h1>My Cart</h1>
-			
-			<% total = 0 %>
-		
-			<ul>
-				<% @cart.ownerships.each do |ownership| %>
-				<li>	
-					<%= image_tag Item.find(ownership.item_id).picture.url(:thumb) %>
-					<%= Item.find(ownership.item_id).name %>
-					<%= ownership.quantity %>
-				</li>
-					<% total = total + Item.find(ownership.item_id).price * ownership.quantity %>
+			<span id="upper_right">	
+				<% if user_signed_in? %>
+					<li><%= link_to "Cart (#{current_user.carts.last.items.size})", "/carts/#{current_user.carts.last.id}"%></li>		
+					<li><%= "Welcome, #{current_user.first_name}" %></li>
+					<li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+				<% else %>
+					<li><%= link_to "Sign Up", new_user_registration_path %></li>
+					<li><%= link_to "Sign In", new_user_session_path %></li>
 				<% end %>
-			</ul>
+			</span>
+		</ul>
+	</div>
 
 
-
-			<div id = "total">
-				<%= "Total Price: $#{total.round(2)}" %>
-			</div>
-
-			<%= link_to 'Check Out Now', "/charges/new?amount=#{total}" %>
+	<div id="mycart">
+		<h1>Review Your Cart</h1>	
+		<% total = 0 %>	
+		<ul>
+			<% @cart.ownerships.each do |ownership| %>
+			<li>	
+				<span id="my_item_picture"><%= image_tag Item.find(ownership.item_id).picture.url(:thumb) , size: "140x130"%></span>
+				<div id="other_info">
+					<p><strong><%= Item.find(ownership.item_id).name %></strong></p>
+					<p><%= "Quantity: #{ownership.quantity}" %></p>
+					<span class="price"><%= "$#{Item.find(ownership.item_id).price}"%></span>
+					<div >
+						<%= link_to(image_tag('minus.png', width: '30', height: '30'), "/ownerships/:id?item_id=#{Item.find(ownership.item_id).id}&cart_id=#{current_user.carts.last.id}", method: :delete) %>
+						<%= link_to(image_tag('plus.png', width: '30', height: '30'), "/ownerships?item_id=#{Item.find(ownership.item_id).id}&cart_id=#{current_user.carts.last.id}", method: :post)  %>
+					</div>
+				</div>
+			</li>
+				<% total = total + Item.find(ownership.item_id).price * ownership.quantity %>
+			<% end %>
+		</ul>
+		<div id = "total">
+			<p><%= "Total Price: $#{total.round(2)}" %></p>
+			<span id="checkout"><%= link_to 'Check Out Now', "/charges/new?amount=#{total.round(2)}" %></span>
 		</div>
+	</div>
+
+
+
+
+
+
 
 
 	</body>

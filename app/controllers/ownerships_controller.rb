@@ -1,5 +1,6 @@
 class OwnershipsController < ApplicationController
 	before_action :set_ownership, only: [:destroy]
+	before_action :authenticate_user!, :only => [:create,:destroy]
 
 	def new
 		@ownership = Ownership.new

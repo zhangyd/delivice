@@ -23,6 +23,7 @@
 	left: 0px;
 	right: 0px;
 	height: 50px;
+	z-index: 20;
 
 
 	h2 {
@@ -92,11 +93,7 @@
 	top: 8%;
 	left: 0px;
 	bottom: 0px;
-	/*background-color: #FFFFFF;*/
-	background: url(../assets/board.png) no-repeat; 
-
-	z-index: -10;
-	color: #FFFFFF;
+	z-index: 10;
 
 	ul {
 		list-style: none;
@@ -104,46 +101,173 @@
 
 	a, a:visited{
 		text-decoration: none;
-		color: #FFFFFF;
+		color: #000000;
+
 	}
 
 	a:hover {
 		background-color: orange;
+		width: 210px;
+		color: #000000;
+	}
+
+}
+
+
+
+#mycart {
+	width: 100%;
+	margin: 0px;
+	margin-top: 80px;
+	text-align: center;
+	h1{
+		width: 300px;
+		border-style: solid;
+		border-color: orange;
+		padding: 8px 16px;
+		margin: auto;
+		display: inline-block;
+	}
+	h2 {
+		display: inline-block;
+	}
+	ul {
+		list-style: none;
+		text-align: left;
+		margin-bottom: 100px;
+		li {
+			float: left;
+			display: inline-block;
+			width: 25%;
+			height: 150px;
+			margin: 15px 4.16% 15px 4.16%;
+			background-color: #FFB547;
+			border-radius: 8px;
+		}
+	}
+	#my_item_picture {
+		display: inline-block;
+		position: absolute;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	#other_info {
+		margin-left: 170px;
+	}
+	#total {
+		clear: both;
+		height: 200px;
+		font-size: 1.6em;
+		a, a:hover, a:visited {
+			text-decoration: none;
+			color: white;
+			background-color: orange;
+			padding: 8px 15px;
+			border-radius: 15px;
+		}
+		p{
+			margin-top: 200px;
+		}
+	}
+
+}
+
+html{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+}
+
+
+
+#sign_up_page {
+	background: url(../assets/forth.jpg) no-repeat center;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-size: 100%;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+	text-align: center;
+	color: #FFFFFF;
+	.block {
+		display: inline-block;
+	}
+	#form_body{
+		background-color: #000000;
+		opacity: 0.7;
+		width: 50%;
+		margin: auto;
+		padding: 20px 5px;
+		#main_body{
+			font-size: 1.1em;
+			margin-bottom: 30px;
+		}
+	}
+	h2 {
+		padding-top: 120px;
+		font-size: 2.2em;
+	}
+	a, a:hover, a:visited {
+		text-decoration: none;
 		color: #FFFFFF;
 	}
 
 }
 
 
-#showcart {
-	width: 1050px;
-	margin-left: 210px;
-	margin-top: 80px;
-	background-color: orange;
-
-	ul {
-		list-style: none;
-
-		li {
-			display: inline-block;
-			width: 40%;
-			margin: 15px 5% 15px 5%;
-			float: left;
-			background-color: blue;
+#sign_in_page {
+	background: url(../assets/forth.jpg) no-repeat center;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-size: 100%;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+	text-align: center;
+	color: #FFFFFF;
+	#form_body{
+		background-color: #000000;
+		opacity: 0.7;
+		padding: 20px 5px;
+		width: 50%;
+		margin: auto;
+		#main_body{
+			font-size: 1.6em;
+			margin-bottom: 30px;
 		}
-
 	}
-
-	a, a:visited, a:hover {
+	h2 {
+		padding-top: 90px;
+		font-size: 2.2em;
+	}
+	a, a:hover, a:visited {
 		text-decoration: none;
-		color: #000000;
+		color: #FFFFFF;
 	}
-
-	#total {
-		clear: both
-	}
-
 }
+
+
+#payment_page {
+	background: url(../assets/forth.jpg) no-repeat center;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-size: 100%;
+	height: 100%;
+	width: 100%;
+	z-index: -10;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
 
 
 

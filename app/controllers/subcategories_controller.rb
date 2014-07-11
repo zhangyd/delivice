@@ -4,6 +4,11 @@ class SubcategoriesController < ApplicationController
 	def show
 		@items = Item.where(:subcategory_id => params[:id])
 		@categories = @subcategory.category.store.categories
+		if user_signed_in?
+			@cart = current_user.carts.last
+		else
+			@cart = Cart.last
+		end
 	end
 
 

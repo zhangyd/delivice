@@ -1,6 +1,5 @@
 class CartsController < ApplicationController
 	before_action :set_cart, only: [:show, :remove]
-	before_action :authenticate_user!, :only => [:update,:remove]
 	before_action :authenticate_admin!, :only => :index
 
 	def index

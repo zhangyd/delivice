@@ -6,14 +6,15 @@
 
 	<body>
 		
-		<div class = "partial">
-		<ul id="chooseheader1">	
+
+
+	<div class = "storenavigation">
+		<ul>	
 			<a href="/"><h2>Delivice</h2></a>
-				<ul id = "stores">
-					<li><%= link_to "#{@category.store.name}", "/stores/#{@category.store.id}"%></li>
-					<li><%= link_to 'Switch Store', stores_path %></li>
-				</ul>
-			<span id = "check1">	
+					<li id="cart_icon"><%= image_tag 'cart.png', size: "40x40" %></li>
+					<li id="current_store"><%= link_to "#{@category.store.name}", "/stores/#{@category.store.id}" %></li>
+					<li id="switch"><%= link_to 'switch store', stores_path() %></li>
+			<span id="upper_right">	
 				<% if user_signed_in? %>
 					<li><%= link_to "Cart (#{current_user.carts.last.items.size})", "/carts/#{current_user.carts.last.id}"%></li>		
 					<li><%= "Welcome, #{current_user.first_name}" %></li>
@@ -24,12 +25,7 @@
 				<% end %>
 			</span>
 		</ul>
-		</div>
-
-
-
-
-
+	</div>
 
 
 
@@ -52,29 +48,44 @@
 
 
 		<div id ="popitems">
-
 			<% @subcategories.each do |subcategory| %>
 					<li>
-						<%= link_to subcategory.name, subcategory %>
+						<strong><%= link_to subcategory.name, subcategory %></strong>
 						<%= link_to "View More", subcategory %>
 						<ul>
 							<% subcategory.items.each_with_index do |item,index| %>
 							<% if index == 4 %>
 								<% break %>
 							<% end %>
-							<li>
-								<%= image_tag item.picture.url(:thumb) %>
-								<p><%= item.name %></p>
-								<p><%= link_to 'Add', "/ownerships?item_id=#{item.id}&cart_id=#{current_user.carts.last.id}", method: :post %></p>
-								<p><%= link_to 'Remove', "/ownerships/:id?item_id=#{item.id}&cart_id=#{current_user.carts.last.id}", method: :delete %></p>
+							<li class="each_item">
+								<div class="item_pic"><%= image_tag item.picture.url(:thumb) , size: "170x150"%></div>
+								
+								<div class="quantity_button_bar">
+									<%= link_to(image_tag('minus.png', width: '30', height: '30'), "/ownerships/:id?item_id=#{item.id}&cart_id=#{@cart.id}", method: :delete)  %>
+									<span class="price"><%= "$#{item.price}"%></span>
+									<%= link_to(image_tag('plus.png', width: '30', height: '30'), "/ownerships?item_id=#{item.id}&cart_id=#{@cart.id}", method: :post)  %>
+								</div>
+
+								<span class="item_name"><strong><%= item.name %></strong></span>		
+								<p><%= item.unit %></p>
+								
 							</li>
 							<% end %>
 						</ul>
 					</li>
 			<% end %>
-
 		</div>
 		
+
+
+
+
+
+
+
+
+
+
 
 	</body>
 <html>

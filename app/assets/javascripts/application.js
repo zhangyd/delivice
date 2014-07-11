@@ -17,9 +17,17 @@
 
 $(document).ready(function(){
 	$(".hidesub").click(function(){
-		$(".sub").toggle()
+		$(".sub").toggle('slow')
 	});
 
 	$('#choosestore').hide().fadeIn(500)
 	
 });
+
+$(function () {
+	$(".quantity_button_bar").hide();
+	$(".each_item").hover(function () {
+		$(this).find(".quantity_button_bar").toggle();
+	});
+});
+		

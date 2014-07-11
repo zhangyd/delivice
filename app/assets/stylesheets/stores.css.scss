@@ -38,20 +38,75 @@ html {
 #popitems {
 	text-decoration: none;
 	width: 1050px;
-	margin-left: 210px;
+	margin-left: 180px;
 	margin-top: 80px;
-
+	li{
+		text-decoration: none;
+		color: black;
+	}
 	ul {
 		list-style: none;
-
 		li {
 			display: inline-block;
 			width: 20%;
 			margin: 15px 2.5% 15px 2.5%;
+			border-radius: 10%;
 			float: left;
+			height: 260px;
+			background-color: #FFB547;
+			.item_pic {
+				margin-left: 15px;
+				margin-top: 15px;
+			}
 		}
-
 	}
+	.item_pic{
+		margin-bottom: 20px;
+	}
+	.each_item{
+		position: relative;
+	}
+	p {
+		margin-bottom: 5px;
+		margin-top: 5px;
+		color: #585858;
+		margin-left: 20px;
+	}
+
+	.price {
+		font-size: 1.3em;
+	}
+
+	.item_name {
+		margin-left: 20px;
+	}
+
+	.quantity_button_bar {
+		background-color: white;
+		opacity: 0.9;
+		text-align: center;
+		margin-bottom: 0px;
+		position: absolute;
+		top: 115px;
+		left: 15px;
+		right: 17px;
+		padding-top: 15px;
+		span {
+			margin-bottom: 5px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+	}
+
+	#num_in_cart {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 17px;
+		color: #585858;
+		font-size: 1.3em;
+	}
+	
 }
 
 

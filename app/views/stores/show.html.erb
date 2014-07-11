@@ -30,7 +30,7 @@
 			<ul>
 				<% @categories.each do |category| %>
 				<li>
-					<%= link_to category.name, category %>
+					<strong><%= link_to category.name, category %></strong>
 					<span class ="hidesub">More</span>
 					<ul class ="sub">
 						<% category.subcategories.each do |subcategory| %>
@@ -45,18 +45,21 @@
 
 		<div id = "popitems">
 			<ul>
-				<% @subcategories[0].items.each do |item| %>
-					<li>
-						<%= image_tag item.picture.url(:thumb) %>
-						<p><%= item.name %></p>
-						<span><%= item.unit %></span>
-						<span><%= "$#{item.price}"%></span>
-						<p><%= link_to 'Add', "/ownerships?item_id=#{item.id}&cart_id=#{current_user.carts.last.id}", method: :post %></p>
-						<p><%= link_to 'Remove', "/ownerships/:id?item_id=#{item.id}&cart_id=#{current_user.carts.last.id}", method: :delete %></p>
+				<% @subcategories[0].items.each_with_index do |item, index| %>
+					<li class="each_item">
+						<div class="item_pic"><%= image_tag item.picture.url(:thumb) , size: "170x150"%></div>
+						
+						<div class="quantity_button_bar">
+							<%= link_to(image_tag('minus.png', width: '30', height: '30'), "/ownerships/:id?item_id=#{item.id}&cart_id=#{@cart.id}", method: :delete, class: "quantity_button") %>
+							<span class="price"><%= "$#{item.price}"%></span>
+							<%= link_to(image_tag('plus.png', width: '30', height: '30'), "/ownerships?item_id=#{item.id}&cart_id=#{@cart.id}", method: :post, class: "quantity_button") %>
+						</div>
+						<span class="item_name"><strong><%= item.name %></strong></span>		
+						<p><%= item.unit %></p>	
+						<div class = "quantity_button_bar" id="num_in_cart"><%= "#{@quantities[index]} in Cart"%></div>	
 					</li>
 				<% end %>
 			</ul>
-
 		</div>
 
 

@@ -8,7 +8,27 @@ class StoresController < ApplicationController
 	def show
 		@categories = @store.categories
 		@subcategories = @store.subcategories
-		@items = @store.items		
+		@items = @store.items
+		if user_signed_in?
+			@cart = current_user.carts.last
+		else
+			@cart = Cart.last
+		end
+		quantities = []
+		items = @store.subcategories[0].items	
+		items.each do |item|
+			if user_signed_in?
+				ownership = Ownership.where(:item_id => item.id, :cart_id => current_user.carts.last.id).first
+			else
+				ownership = nil
+			end
+			if ownership 
+				quantities << ownership.quantity
+			else
+				quantities << 0
+			end
+		end	
+		@quantities = quantities
 	end
 
 	private 
