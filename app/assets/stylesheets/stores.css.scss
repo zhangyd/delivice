@@ -40,6 +40,13 @@ html {
 	width: 1050px;
 	margin-left: 180px;
 	margin-top: 80px;
+	h1{
+		border-style: solid;
+		border-color: orange;
+		padding: 5px 10px;
+		width: 200px;
+		margin: auto;
+	}
 	li{
 		text-decoration: none;
 		color: black;

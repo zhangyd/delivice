@@ -1,1 +1,15 @@
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+
+<html>
+	<head>
+		<title>Delivice</title>
+	</head>
+	<body>
+		<div id="paid_page">
+			<h2>Thanks You! Your payment of <strong><%= "$#{@amount}" %></strong> have been received!</h2>
+			<p>Your order will be delivered on the time and date that you specified. </p>
+
+			<%= link_to "Return to Home Page", root_path %>
+		</div>
+	</body>
+
+</html>

@@ -35,11 +35,11 @@
 			<ul>
 				<% @categories.each do |category| %>
 				<li>
-					<%= link_to category.name, category %>
-					<span class ="hidesub">More</span>
-					<ul class ="sub">
+					<strong><span class="cate-name"><%= link_to category.name, category %></span></strong>
+					<%= link_to(image_tag('more.png', width: '12', height: '8'), "#", class:  "more_button", "data-id" => category.id) %>
+					<ul class ="sub" id=<%="#{category.id}"%>>
 						<% category.subcategories.each do |subcategory| %>
-						<li> <%= link_to subcategory.name, subcategory %> </li>
+						<li><%= link_to subcategory.name, subcategory %></li>
 						<% end %>
 					</ul>
 				</li>

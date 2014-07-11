@@ -94,7 +94,11 @@
 	left: 0px;
 	bottom: 0px;
 	z-index: 10;
+	line-height: 25px;
+	.cate-name{
+		font-size: 16px;
 
+	}
 	ul {
 		list-style: none;
 	}
@@ -102,13 +106,17 @@
 	a, a:visited{
 		text-decoration: none;
 		color: #000000;
-
+		color: orange;
+		font-style: bold;
 	}
 
 	a:hover {
-		background-color: orange;
+		/*background-color: orange;
 		width: 210px;
-		color: #000000;
+		color: #000000;*/
+		color: black;
+		font-style: bold;
+
 	}
 
 }
@@ -250,6 +258,7 @@ html{
 
 #payment_page {
 	background: url(../assets/forth.jpg) no-repeat center;
+	background-color: orange;
 	background-size: cover;
 	background-position: 50% 50%;
 	background-size: 100%;
@@ -262,11 +271,18 @@ html{
 
 
 
+#paid_page {
+	background-color: orange;
+	text-align: center;
+}
 
 
 
-
-
+.notice, .alert {
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+}
 
 
 

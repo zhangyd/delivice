@@ -15,12 +15,26 @@
 //= require_tree .
 
 
+
 $(document).ready(function(){
-	$(".hidesub").click(function(){
-		$(".sub").toggle('slow')
-	});
+	// $(".hidesub").click(function(){
+	// 	$(".sub").toggle('slow')
+	// });
 
 	$('#choosestore').hide().fadeIn(500)
+
+	// whenever i click more
+	// get the class from the link i clicked on
+	// toggle all the items with that class
+
+	$('.sub').hide()
+
+	$('.more_button').click(function () {
+
+		var id = $(this).attr("data-id")
+		$("#"+id).toggle()
+	});
+
 	
 });
 
@@ -30,4 +44,9 @@ $(function () {
 		$(this).find(".quantity_button_bar").toggle();
 	});
 });
+
+
+
+
+
 		
