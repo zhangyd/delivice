@@ -1,16 +1,19 @@
 
+
 <html>
 	<head>
 		<title>Delivice</title>
 	</head>
-	<body>
+	<body id="payment_page">
+
+		<div id="main_body">
 		<%= form_tag charges_path do %>
 
 		<%= hidden_field_tag :amount, @amount %>
-
-		  <article id="payment_page">
+			
+		  <article >
 		    <label class="amount">
-		      <span><%= "Amount: $#{params[:amount]}"%> </span>
+		      <span id="total_amount"><%= "Your Total Is: $#{params[:amount]}"%> </span>
 		    </label>
 		  </article>
 
@@ -19,7 +22,8 @@
 		          data-description="My Grocery Bill"
 		          data-amount="<%=@amount%>"></script>
 		<% end %>
-
+		</div>
 
 	</body>
+
 </html>

@@ -179,7 +179,7 @@
 	}
 	#form {
 		font-size: 1.5em;
-		
+		clear: both;
 	}
 
 }
@@ -260,25 +260,7 @@ html{
 }
 
 
-#payment_page {
-	background: url(../assets/forth.jpg) no-repeat center;
-	background-color: orange;
-	background-size: cover;
-	background-position: 50% 50%;
-	background-size: 100%;
-	height: 100%;
-	width: 100%;
-	z-index: -10;
-	text-align: center;
-	color: #FFFFFF;
-}
 
-
- 
-#paid_page {
-	background-color: orange;
-	text-align: center;
-}
 
 
 
@@ -286,11 +268,6 @@ html{
 	color: white;
 	text-align: center;
 	font-size: 1.2em;
-}
-
-#devicse_pages {
-	text-align: center;
-	background-color: orange;
 }
 
 
