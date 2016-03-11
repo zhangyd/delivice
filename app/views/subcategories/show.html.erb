@@ -33,6 +33,7 @@
 
 		<div class = "cateonleft">
 			<ul>
+
 				<% @categories.each do |category| %>
 				<li>
 					<strong><span class="cate-name"><%= link_to category.name, category %></span></strong>
@@ -44,6 +45,7 @@
 					</ul>
 				</li>
 				<% end %>
+				
 			</ul>
 		</div>
 

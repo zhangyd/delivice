@@ -1,23 +1,23 @@
 <%= form_for(@item,:multipart =>true) do |f| %>
 	<%= f.label :name %>
-  	<%= f.text_field :name %>
-  	<br/><br/>
+	<%= f.text_field :name %>
+	<br/><br/>
 
-  	<%= f.label :price %>
-  	<%= f.text_field :price %>
-  	<br/><br/>
+	<%= f.label :price %>
+	<%= f.text_field :price %>
+	<br/><br/>
 
-  	<%= f.label :unit %>
-  	<%= f.text_field :unit %>
-  	<br/><br/>
+	<%= f.label :unit %>
+	<%= f.text_field :unit %>
+	<br/><br/>
 
-  	<%= f.label :subcategory_id %>
-  	<%= f.text_field :subcategory_id %>
-  	<br/><br/>
+	<%= f.label :subcategory_id %>
+	<%= f.text_field :subcategory_id %>
+	<br/><br/>
 
-    <%= f.label :picture %>
-    <%= f.file_field :picture %>
-    <br/><br/>
+  <%= f.label :picture %>
+  <%= f.file_field :picture %>
+  <br/><br/>
 
 	<%= f.submit %>
 
