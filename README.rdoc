@@ -1,28 +1,29 @@
-== README
+== How to run this project locally
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Clone the repo to a local directory
+```
+git clone https://github.com/zhangyd/delivice.git
+```
 
-Things you may want to cover:
+2. Install all dependencies
+```
+bundle install
+```
 
-* Ruby version
+3. Run database migration
+```
+rake db:migrate
+```
 
-* System dependencies
+4. Populate database with some pre-set records (only a sample)
+``` 
+rake db:seed
+```
 
-* Configuration
+5. Start the Rails server
+```
+rails s
+```
 
-* Database creation
+6. Navigate to "localhost:3000" in your browser to view!
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
