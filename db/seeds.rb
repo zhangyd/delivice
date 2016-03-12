@@ -19,6 +19,9 @@
 # end
 
 
+# Create an admin user
+manager = User.create(:first_name => "Bob", :last_name => "Smith", :email => "bob@smith.com", :password => "hi123456", :password_confirmation => "hi123456", :role => "admin")
+
 
 # Populate Store Model
 kroger = Store.create(:name => "Kroger", :location => "2641 Plymouth Rd, Ann Arbor, MI 48105")
